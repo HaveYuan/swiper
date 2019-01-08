@@ -1,0 +1,15 @@
+<!--index.wxml-->
+  <view style="width:100%;height:500rpx;">
+    <swiper duration='0' current="{{current}}" bindchange='swiperChange' style="height:100%;">
+      <swiper-item>
+        <view class="{{page == 1 ? '' : 'bg'}}"></view>
+      </swiper-item>
+      <swiper-item>
+        <image style="width:100%;height:500rpx;" src="{{picUrl}}" mode='scaleToFill'></image>
+      </swiper-item>
+      <swiper-item>
+        <view class="{{page == numAll ? '' : 'bg'}}"></view>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view style="text-align:center;margin-top:20rpx;">{{page}}/{{numAll}}</view>
